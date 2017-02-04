@@ -17,9 +17,11 @@ namespace ConsoleApplication1
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
 
-            HorizontalLine line = new HorizontalLine(5, 12, 10, '*');
-            line.Draw();
-                    
+            HorizontalLine gline = new HorizontalLine(5, 12, 10, '*');
+            gline.Draw();
+
+            VerticalLine vline = new VerticalLine(3, 8, 12, '+');
+            vline.Draw();
 
             Console.ReadLine();
         }

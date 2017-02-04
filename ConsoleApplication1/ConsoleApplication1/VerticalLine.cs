@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class HorizontalLine
+    class VerticalLine
     {
         List<Point> pList;
 
-        public HorizontalLine(int xLeft, int xRigth, int y, char sym)
+        public VerticalLine(int yUp, int yBottom, int x, char sym)
         {
             pList = new List<Point>();
 
-            for (int x = xLeft; x <= xRigth; x++)
+            for (int y = yUp; y <= yBottom; y++)
             {
                 Point p = new Point(x, y, sym);
                 pList.Add(p);
@@ -26,7 +26,9 @@ namespace ConsoleApplication1
             foreach (Point p in pList)
             {
                 p.Draw();
+
             }
         }
     }
+
 }
