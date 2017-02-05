@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication1
 {
-    class VerticalLine
+    class VerticalLine : Figure
     {
-        List<Point> pList;
-
         public VerticalLine(int yUp, int yBottom, int x, char sym)
         {
             pList = new List<Point>();
@@ -21,14 +19,6 @@ namespace ConsoleApplication1
             }
         }
 
-        public void Draw()
-        {
-            foreach (Point p in pList)
-            {
-                p.Draw();
-
-            }
-        }
     }
 
 }
