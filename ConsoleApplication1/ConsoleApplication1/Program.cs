@@ -22,8 +22,8 @@ namespace ConsoleApplication1
 
             VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
             leftLine.Draw();
-            VerticalLine rigthLine = new VerticalLine(0, 24, 78, '+');
-            leftLine.Draw();
+            VerticalLine rightLine = new VerticalLine(0, 24, 78, '+');
+            rightLine.Draw();
 
 
             // Отрисовка змейки
