@@ -11,17 +11,25 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
 
-            Point p1 = new Point(1, 3, '*');
-            p1.Draw();
+            Console.SetBufferSize(80, 25);
 
-            Point p2 = new Point(4, 5, '#');
-            p2.Draw();
+            // Отрисовка рамки
 
-            HorizontalLine gline = new HorizontalLine(5, 12, 10, '*');
-            gline.Draw();
+            HorizontalLine upLine = new HorizontalLine(0, 78, 0, '+');
+            upLine.Draw();
+            HorizontalLine downLine = new HorizontalLine(0, 78, 24, '+');
+            downLine.Draw();
 
-            VerticalLine vline = new VerticalLine(3, 8, 12, '+');
-            vline.Draw();
+            VerticalLine leftLine = new VerticalLine(0, 24, 0, '+');
+            leftLine.Draw();
+            VerticalLine rigthLine = new VerticalLine(0, 24, 78, '+');
+            leftLine.Draw();
+
+
+            // Отрисовка змейки
+
+            Point p = new Point(4, 3, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
 
             Console.ReadLine();
         }
