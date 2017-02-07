@@ -32,17 +32,17 @@ namespace ConsoleApplication1
             Point p = new Point(4, 3, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
+           
+            while(true)
+            {
+                if(Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandlKey(key.Key);                
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }
 
             Console.ReadLine();
         }
