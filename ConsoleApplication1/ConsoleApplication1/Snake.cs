@@ -56,5 +56,19 @@ namespace ConsoleApplication1
                 direction = Direction.DOWN;
 
         }
+        internal bool Eats (Point food)
+        {
+            Point head = GetNextPoint();
+            if (head.IsHit (food))
+                {
+                food.sym = head.sym;
+                pList.Add(food);
+                return true;                
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
