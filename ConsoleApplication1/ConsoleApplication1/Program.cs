@@ -43,7 +43,7 @@ namespace ConsoleApplication1
                 if (snake.Eats(food))
                 {
                     food = foodCreator.CreateFood();
-                    food.Draw;
+                    food.Draw();
                 }
                 else
                 {
